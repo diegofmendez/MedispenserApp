@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 
-public class Medispenser {
+public class IGU {
 
     public static void main(String[] args) {
         JFrame window = new JFrame("Ventanaita");
