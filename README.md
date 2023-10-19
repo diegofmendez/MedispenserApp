@@ -13,5 +13,49 @@ Medispenser es un dispensador de medicamentos vinculado a una applicacion para e
 - Arduino
 - MySQL
 
-# Código conexión MySQL
+# Código arduino
+#include <Servo.h>
+Servo servo1;
+
+int mensaje;
+
+
+
+void setup() {
+
+  servo1.attach(3);
+
+  Serial.begin(9600);
+
+
+
+}
+
+
+
+void loop() {
+
+if(Serial.available()>0){
+
+  mensaje = Serial.read();
+
+  if(mensaje=='1'){
+
+    servo1.write(90);
+
+    delay(1000);
+
+    servo1.write(0);
+
+    delay(1000);
+
+    servo1.write(90);
+
+    delay(1000);
+
+    }
+
+  }
+
+}
 
