@@ -14,6 +14,7 @@ Medispenser es un dispensador de medicamentos vinculado a una applicacion para e
 - MySQL
 
 # Código arduino
+```
 #include <Servo.h>
 Servo servo1;
 
@@ -58,4 +59,4 @@ if(Serial.available()>0){
   }
 
 }
-
+```
