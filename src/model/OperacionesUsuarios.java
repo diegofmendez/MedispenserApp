@@ -11,6 +11,7 @@ public class OperacionesUsuarios {
     private Scanner scanner;
             
     public void registro(Connection conexion){
+        MYSQLWork.getConnection();
         try {
             PreparedStatement consulta;
             consulta = conexion.prepareStatement("INSERT INTO "+ this.tabla +" (NAME, PASSWORD, TYPE, TELEFONO) VALUES (?,?,?,?)");

@@ -6,7 +6,7 @@ package modelView;
 
 import javax.swing.JFrame;
 import view.InicioSesion;
-import view.RegistroPaciente;
+import view.RegistroParaMiPaciente;
 import view.RegistroParaQuien;
 import view.RegistroTipoPaciente;
 import view.RegistroYo;
@@ -41,7 +41,7 @@ public class Redirect {
                         parami.setVisible(true);
                         parami.setLocationRelativeTo(null);
             case 5:
-                        RegistroPaciente paciente = new RegistroPaciente();
+                        RegistroParaMiPaciente paciente = new RegistroParaMiPaciente();
                         paciente.setVisible(true);
                         paciente.setLocationRelativeTo(null);
                 

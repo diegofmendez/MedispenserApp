@@ -5,8 +5,9 @@ package model;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+
 public class MYSQLWork {
-    private static java.sql.Connection con;
+    public static java.sql.Connection con;
     public static String driver  = "com.mysql.jdbc.Driver";
     public static String user = "root";
     public static String pass = "";

@@ -4,15 +4,14 @@
  */
 package view;
 
+
 /**
  *
  * @author dfmen
  */
 public class RegistroYo extends javax.swing.JFrame {
 
-    /**
-     * Creates new form RegistroYo
-     */
+
     public RegistroYo() {
         initComponents();
     }

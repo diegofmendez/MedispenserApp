@@ -1,6 +1,7 @@
 
 package modelView;
 
+import model.MYSQLWork;
 import view.Inicio;
 
 
@@ -13,7 +14,7 @@ public class medispenser {
         Inicio inici = new Inicio();
         inici.setVisible(true);
         inici.setLocationRelativeTo(null);
-        
-
+    
+        MYSQLWork.getConnection();
     }
 }
