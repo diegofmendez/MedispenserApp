@@ -3,7 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/dfmen/OneDrive/Documentos/Java/Proyectos%20Principiante/Medispenser/src/medispenser/medispenser.java</file>
+            <file>file:/C:/Users/dfmen/OneDrive/Documentos/Java/Proyectos%20Principiante/Medispenser/src/view/RegistroParaMiPaciente.java</file>
+            <file>file:/C:/Users/dfmen/OneDrive/Documentos/Java/Proyectos%20Principiante/Medispenser/src/modelView/Redirect.java</file>
+            <file>file:/C:/Users/dfmen/OneDrive/Documentos/Java/Proyectos%20Principiante/Medispenser/src/view/Inicio.java</file>
+            <file>file:/C:/Users/dfmen/OneDrive/Documentos/Java/Proyectos%20Principiante/Medispenser/src/view/InformacionPaciente.java</file>
+            <file>file:/C:/Users/dfmen/OneDrive/Documentos/Java/Proyectos%20Principiante/Medispenser/src/model/OperacionesUsuarios.java</file>
         </group>
     </open-files>
 </project-private>

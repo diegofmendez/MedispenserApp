@@ -7,14 +7,14 @@ package view;
 import java.sql.Connection;
 import model.MYSQLWork;
 import model.OperacionesUsuarios;
+import modelView.Redirect;
 
 /**
  *
  * @author dfmen
  */
 public class RegistroParaMiPaciente extends javax.swing.JFrame {
-
-        Connection con = MYSQLWork.getConnection();
+    Connection con = MYSQLWork.getConnection();
         OperacionesUsuarios operacionesi = new OperacionesUsuarios();
         
         
@@ -32,30 +32,46 @@ public class RegistroParaMiPaciente extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        TextUsuario = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        ButtonIngresar = new javax.swing.JButton();
+        TextContrasena = new javax.swing.JTextField();
+        ButtonIniciarSesion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Registrar un paciente");
 
-        jTextField1.setText("Nombre");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        TextUsuario.setText("Nombre");
+        TextUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                TextUsuarioActionPerformed(evt);
+            }
+        });
+        TextUsuario.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                TextUsuarioKeyTyped(evt);
             }
         });
 
         jLabel2.setText("Nombre");
 
-        jLabel3.setText("jLabel3");
+        jLabel3.setText("Contraseña");
 
-        jTextField2.setText("Contraseña");
+        TextContrasena.setText("Nombre");
+        TextContrasena.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TextContrasenaActionPerformed(evt);
+            }
+        });
 
-        ButtonIngresar.setText("jButton1");
+        ButtonIniciarSesion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        ButtonIniciarSesion.setText("Registrarme");
+        ButtonIniciarSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonIniciarSesionActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -68,15 +84,16 @@ public class RegistroParaMiPaciente extends javax.swing.JFrame {
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(96, 96, 96)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
-                            .addComponent(jTextField1)
+                            .addComponent(TextUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(157, 157, 157)
-                        .addComponent(ButtonIngresar)))
+                            .addComponent(TextContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(110, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(ButtonIniciarSesion)
+                .addGap(147, 147, 147))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -86,22 +103,43 @@ public class RegistroParaMiPaciente extends javax.swing.JFrame {
                 .addGap(33, 33, 33)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(TextUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addComponent(ButtonIngresar)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(TextContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(ButtonIniciarSesion)
+                .addGap(27, 27, 27))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void TextUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextUsuarioActionPerformed
         
-    }//GEN-LAST:event_jTextField1ActionPerformed
+        
+        
+        Redirect.redireccion(2);
+    }//GEN-LAST:event_TextUsuarioActionPerformed
+
+    private void TextContrasenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextContrasenaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextContrasenaActionPerformed
+
+    private void ButtonIniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonIniciarSesionActionPerformed
+        String texto = TextUsuario.getText();
+        String contrasena = TextContrasena.getText();
+        operacionesi.registrar(con, texto, texto);
+        operacionesi.verificar(con);
+    }//GEN-LAST:event_ButtonIniciarSesionActionPerformed
+    
+    //Limitar número de letras
+    private void TextUsuarioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TextUsuarioKeyTyped
+        if (TextUsuario.getText().length() >= 39){
+            evt.consume();
+        }
+    }//GEN-LAST:event_TextUsuarioKeyTyped
 
     /**
      * @param args the command line arguments
@@ -109,11 +147,11 @@ public class RegistroParaMiPaciente extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ButtonIngresar;
+    private javax.swing.JButton ButtonIniciarSesion;
+    private javax.swing.JTextField TextContrasena;
+    private javax.swing.JTextField TextUsuario;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }

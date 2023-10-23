@@ -6,6 +6,7 @@ package view;
 
 
 
+import model.OperacionesUsuarios;
 import modelView.Redirect;
 
 public class Inicio extends javax.swing.JFrame {

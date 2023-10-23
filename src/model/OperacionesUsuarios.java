@@ -2,6 +2,7 @@ package model;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
 
@@ -10,32 +11,15 @@ public class OperacionesUsuarios {
     final String tabla = "usuarios";
     private Scanner scanner;
             
-    public void registro(Connection conexion){
+    public void registrar(Connection conexion, String NAME, String PASSWORD){
         MYSQLWork.getConnection();
         try {
             PreparedStatement consulta;
-            consulta = conexion.prepareStatement("INSERT INTO "+ this.tabla +" (NAME, PASSWORD, TYPE, TELEFONO) VALUES (?,?,?,?)");
+            consulta = conexion.prepareStatement("INSERT INTO "+ this.tabla +" (NAME, PASSWORD, TYPE) VALUES (?,?,?)");
             
-            scanner = new Scanner(System.in);
-
-            for (int i = 0; i < 4; i++) {
-                switch(i) {
-                    case 0:
-                        System.out.println("Ingresar tipo de usuario");
-                        break;
-                    case 1:
-                        System.out.println("Ingresar nombre completo");
-                        break;
-                    case 2:
-                        System.out.println("Ingresar contraseña");
-                        break;
-                    case 3:
-                        System.out.println("Ingresar número de telefono");
-                        break;
-                }
-                String texto = scanner.nextLine();
-                consulta.setString((i+1), texto);
-            }
+            consulta.setString(1, NAME);
+            consulta.setString(2, PASSWORD);
+            consulta.setBoolean(3, true);
 
             consulta.executeUpdate();
             
@@ -48,5 +32,30 @@ public class OperacionesUsuarios {
             }
         }
     }
+    
+    //Verifica que este en la base de datos
+    public void verificar(Connection conexion){
+        
+        try {
+            MYSQLWork.getConnection();
+            PreparedStatement consulta;
+            
+            boolean checker= true;
+            consulta = conexion.prepareStatement("SELECT * FROM " + this.tabla + " WHERE TYPE ='"+checker+"'");
+
+            ResultSet result = consulta.executeQuery();
+
+            while (result.next()) {
+
+                String columnValue = result.getString("NAME");
+                
+                System.out.println("Productos: " + columnValue);
+            }
+
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }
+    
 }
 
