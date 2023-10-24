@@ -6,6 +6,7 @@ package modelView;
 
 import javax.swing.JFrame;
 import view.InicioSesion;
+import view.Menu;
 import view.RegistroParaMiPaciente;
 import view.RegistroParaQuien;
 import view.RegistroTipoPaciente;
@@ -44,7 +45,12 @@ public class Redirect {
                         RegistroParaMiPaciente paciente = new RegistroParaMiPaciente();
                         paciente.setVisible(true);
                         paciente.setLocationRelativeTo(null);
-                
+                break;
+            //vista de medispenmser
+            case 6:
+                        Menu menu = new Menu();
+                        menu.setVisible(true);
+                        menu.setLocation(null);
                 break;
             default:
                 throw new AssertionError();
