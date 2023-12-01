@@ -1,5 +1,5 @@
 # MedispenserApp
-Programa de uso de Medispenser para escritorio
+El proyecto correspondiente al programa es el titulado "MedispenserFinalProject.zip"
 
 # Equipo
 - Gabriella Ballesteros
