@@ -6,12 +6,11 @@ Programa de uso de Medispenser para escritorio
 - Diego Mendez
 
 # ¿Qué es medispenser?
-Medispenser es un dispensador de medicamentos vinculado a una applicacion para escritorio, esta app permite al usuario ingresar los nombres de los medicamentos, los tiempos de administración de cada uno, con esta información, se hace una conexión con arduino con el fin de que el dispositivo fisico administre el medicamento.
+Medispenser es un dispensador de medicamentos vinculado a una applicacion para escritorio, esta app permite al usuario ingresar los nombres de los medicamentos, los tiempos de administración de cada uno, con esta información, se hace una conexión con arduino con el fin de que el dispositivo fisico administre el medicamento y mande una alerta sonora al usuario.
 
 # con que trabajamos
 - Netbeans
 - Arduino
-- MySQL
 
 # Código arduino
 ```
